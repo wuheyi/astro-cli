@@ -25,7 +25,6 @@ pipeline:
     when:
       event: tag
   
-  
   notify:
     image: plugins/slack
     secrets: [ slack_webhook ]
