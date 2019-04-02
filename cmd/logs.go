@@ -12,16 +12,16 @@ var (
 	since  time.Duration
 	logsExample = `
   # Return logs for last 5 minutes of webserver logs and output them.
-  astro logs webserver example-deployment-uuid
+  astro logs webserver example-deployment-id
 
   # Subscribe logs from airflow workers for last 5 min and specify search term, and subscribe to more.
-  astro logs workers example-deployment-uuid --follow --search "some search terms"
+  astro logs workers example-deployment-id --follow --search "some search terms"
   
   # Return logs from airflow webserver for last 25 min.
-  astro logs webserver example-deployment-uuid --since 25m
+  astro logs webserver example-deployment-id --since 25m
 
   # Subscribe logs from airflow scheduler.
-  astro logs scheduler example-deployment-uuid -f
+  astro logs scheduler example-deployment-id -f
 `
 
 	logsCmd = &cobra.Command{
